@@ -72,7 +72,7 @@
 2. Hot & Warm 架构与 Shard Filtering
 3. 如何对集群进行容量规划
 4. 分片设计及管理
-5. 在共有云上管理与部署 Elasticsearch 集群
+5. 在公有云上管理与部署 Elasticsearch 集群
 6. 在私有云上管理 Elasticsearch 集群的一些方法
 ### 第 10 章：生产环境中的集群运维
 1. 集群健康与问题排查
