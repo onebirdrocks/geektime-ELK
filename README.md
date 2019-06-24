@@ -1,4 +1,4 @@
-# 《Elasticsearch 核心技术与实战》课程目录
+# 《Elasticsearch 核心技术与实战》
 ## 第一部分：初识 Elasticsearch
 ### 第 1 章：概述
 1. 课程概述及学习建议
