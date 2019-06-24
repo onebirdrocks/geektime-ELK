@@ -1,30 +1,30 @@
 # 《Elasticsearch 核心技术与实战》课程目录
 ## 第一部分：初识 Elasticsearch
 ### 第 1 章：概述
-- 课程概述及学习建议
-- Elasticsearch 简介及其发展历史
-- Elastic Stack 家族成员其应用场景
+1. 课程概述及学习建议
+2. Elasticsearch 简介及其发展历史
+3. Elastic Stack 家族成员其应用场景
 ### 第 2 章：安装上手
-- Elasticsearch 的安装与简单配置
-- Kibana 的安装与界面快速浏览
-- 在 Docker 容器中运行 Elasticsearch，Kibana 和 Cerebro
-- Logstash 安装与导入数据
+1. Elasticsearch 的安装与简单配置
+2. Kibana 的安装与界面快速浏览
+3. 在 Docker 容器中运行 Elasticsearch，Kibana 和 Cerebro
+4. Logstash 安装与导入数据
 ### 第 3 章：Elasticsearch 入门
-- 基本概念（1）：索引，文档和 REST API
-- 基本概念（2）：节点，集群，分片及副本
-- 文档的基本 CRUD 与批量操作
-- 倒排索引入门
-- 通过分析器进行分词
-- Search API 概览
-- URI Search 详解
-- Request Body 与 Query DSL 简介
-- Query String & Simple Query String 查询
-- Dynamic Mapping 和常见字段类型
-- 显式 Mapping 设置与常见参数介绍
-- 多字段特性及 Mapping 中配置自定义 Analyzer
-- Index Template 和 Dynamic Template
-- Elasticsearch 聚合分析简介
-- 第一部分总结
+1. 基本概念（1）：索引，文档和 REST API
+2. 基本概念（2）：节点，集群，分片及副本
+3. 文档的基本 CRUD 与批量操作
+4. 倒排索引入门
+5. 通过分析器进行分词
+6. Search API 概览
+7. URI Search 详解
+8. Request Body 与 Query DSL 简介
+9. Query String & Simple Query String 查询
+10. Dynamic Mapping 和常见字段类型
+11. 显式 Mapping 设置与常见参数介绍
+12. 多字段特性及 Mapping 中配置自定义 Analyzer
+13. Index Template 和 Dynamic Template
+14. Elasticsearch 聚合分析简介
+15. 第一部分总结
 ## 第二部分：深入了解 Elasticsearch
 ### 第 4 章：深入搜索
 - 基于词项和基于全文的搜索
