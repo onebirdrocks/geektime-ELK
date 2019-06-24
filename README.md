@@ -1,9 +1,10 @@
-# 《Elasticsearch 核心技术与实战》课程目录
+# 《Elasticsearch 核心技术与实战》
 ## 第一部分：初识 Elasticsearch
 ### 第 1 章：概述
-1. 课程概述及学习建议
-2. Elasticsearch 简介及其发展历史
-3. Elastic Stack 家族成员其应用场景
+1. 课程介绍
+2. 课程综述及学习建议
+3. Elasticsearch 简介及其发展历史
+4. Elastic Stack 家族成员其应用场景
 ### 第 2 章：安装上手
 1. Elasticsearch 的安装与简单配置
 2. Kibana 的安装与界面快速浏览
@@ -27,92 +28,92 @@
 15. 第一部分总结
 ## 第二部分：深入了解 Elasticsearch
 ### 第 4 章：深入搜索
-- 基于词项和基于全文的搜索
-- 结构化搜索
-- 搜索的相关性算分
-- Query & Filtering 与多字符串多字段查询
-- 单字符串多字段查询：Dis Max Query
-- 单字符串多字段查询：Multi Match
-- 多语言及中文分词与检索
-- Space Jam，一次全文搜索的实例 
-- 使用 Search Template 和 Index Alias 查询
-- 综合排序：Function Score Query 优化算分
-- Term & Phrase Suggester
-- 自动补全与基于上下文的提示
-- 配置跨集群搜索
+1. 基于词项和基于全文的搜索
+2. 结构化搜索
+3. 搜索的相关性算分
+4. Query & Filtering 与多字符串多字段查询
+5. 单字符串多字段查询：Dis Max Query
+6. 单字符串多字段查询：Multi Match
+7. 多语言及中文分词与检索
+8. Space Jam，一次全文搜索的实例 
+9. 使用 Search Template 和 Index Alias 查询
+10. 综合排序：Function Score Query 优化算分
+11. Term & Phrase Suggester
+12. 自动补全与基于上下文的提示
+13. 配置跨集群搜索
 ### 第 5 章：分布式特性及分布式搜索的机制
-- 集群分布式模型及选主与脑裂问题
-- 分片与集群的故障转移
-- 文档分布式存储
-- 分片及其生命周期
-- 剖析分布式查询及相关性算分
-- 排序及 Doc Values & Fielddata
-- 分页与遍历：From, Size, Search After & Scroll API
-- 处理并发读写操作
+1. 集群分布式模型及选主与脑裂问题
+2. 分片与集群的故障转移
+3. 文档分布式存储
+4. 分片及其生命周期
+5. 剖析分布式查询及相关性算分
+6. 排序及 Doc Values & Fielddata
+7. 分页与遍历：From, Size, Search After & Scroll API
+8. 处理并发读写操作
 ### 第 6 章：深入聚合分析
-- Bucket & Metric 聚合分析及嵌套聚合
-- Pipeline 聚合分析
-- 作用范围与排序
-- 聚合分析的原理及精准度问题
+1. Bucket & Metric 聚合分析及嵌套聚合
+2. Pipeline 聚合分析
+3. 作用范围与排序
+4. 聚合分析的原理及精准度问题
 ### 第 7 章：数据建模
-- 对象及 Nested 对象
-- 文档的父子关系
-- Update By Query & Reindex API
-- Ingest Pipeline & Painless Script 
-- Elasticsearch 数据建模最佳实践
-- 第二部分总结回顾
+1. 对象及 Nested 对象
+2. 文档的父子关系
+3. Update By Query & Reindex API
+4. Ingest Pipeline & Painless Script 
+5. Elasticsearch 数据建模最佳实践
+6. 第二部分总结回顾
 ## 第三部分：管理 Elasticsearch 集群
 ### 第 8 章：保护你的数据
-- 集群身份认证与用户鉴权
-- 集群内部安全通信
-- 集群与外部间的安全通信
+1. 集群身份认证与用户鉴权
+2. 集群内部安全通信
+3. 集群与外部间的安全通信
 ### 第 9 章：水平扩展 Elasticsearch 集群
-- 常见的集群部署方式
-- Hot & Warm 架构与 Shard Filtering
-- 如何对集群进行容量规划
-- 分片设计及管理
-- 在共有云上管理与部署 Elasticsearch 集群
-- 在私有云上管理 Elasticsearch 集群的一些方法
+1. 常见的集群部署方式
+2. Hot & Warm 架构与 Shard Filtering
+3. 如何对集群进行容量规划
+4. 分片设计及管理
+5. 在共有云上管理与部署 Elasticsearch 集群
+6. 在私有云上管理 Elasticsearch 集群的一些方法
 ### 第 10 章：生产环境中的集群运维
-- 集群健康与问题排查
-- 生产环境常用配置与上线清单
-- 监控 Elasticsearch 集群
-- 诊断集群的潜在问题  
-- 解决集群 Yellow 与 Red 的问题
-- 集群压力测试
-- 段合并优化及注意事项
-- 缓存及使用 Breaker 限制内存使用
-- 一些运维的相关建议
+1. 集群健康与问题排查
+2. 生产环境常用配置与上线清单
+3. 监控 Elasticsearch 集群
+4. 诊断集群的潜在问题  
+5. 解决集群 Yellow 与 Red 的问题
+6. 集群压力测试
+7. 段合并优化及注意事项
+8. 缓存及使用 Breaker 限制内存使用
+9. 一些运维的相关建议
 ### 第 11 章：索引生命周期管理
-- 使用 Shrink 与 Rollover API 有效管理时间序列索引
-- 索引全生命周期管理及工具介绍   
+1. 使用 Shrink 与 Rollover API 有效管理时间序列索引
+2. 索引全生命周期管理及工具介绍   
 ## 第四部分：利用 ELK 做大数据分析
 ### 第 12 章：用 Logstash 和 Beats 构建数据管道
-- Logstash 入门及架构介绍
-- Beats 介绍
+1. Logstash 入门及架构介绍
+2. Beats 介绍
 ### 第 13 章：用 Kibana 进行数据可视化分析
-- 使用 Index Pattern 配置数据
-- 使用 Kibana Discover 探索数据
-- 基本可视化组件介绍
-- Visual Builder 介绍 
-- 构建 Dashboard  
+1. 使用 Index Pattern 配置数据
+2. 使用 Kibana Discover 探索数据
+3. 基本可视化组件介绍
+4. Visual Builder 介绍 
+5. 构建 Dashboard  
 ## 第 14 章：探索 X-Pack 套件
-- 用 Monitoring 和 Alerting 监控 Elasticsearch 集群
-- 用 APM 进行程序性能监控
-- 用机器学习实现时序数据的异常检测
-- 用 ELK 进行日志管理
-- 用 Canvas 做数据演示
-- 用 Graph 进行数据分析
-- 用 Timelion 分析时序型数据
+1. 用 Monitoring 和 Alerting 监控 Elasticsearch 集群
+2. 用 APM 进行程序性能监控
+3. 用机器学习实现时序数据的异常检测
+4. 用 ELK 进行日志管理
+5. 用 Canvas 做数据演示
+6. 用 Graph 进行数据分析
+7. 用 Timelion 分析时序型数据
 ## 第五部分：应用实战工作坊  
 ### 实战 1：电影搜索服务
-- 项目需求分析及架构设计
-- 将音乐数据导入 Elasticsearch
-- 搭建你的电影搜索服务   
+1. 项目需求分析及架构设计
+2. 将音乐数据导入 Elasticsearch
+3. 搭建你的电影搜索服务   
 ### 实战 2：Stackoverflow 用户调查问卷分析
-- 需求分析及架构设计
-- 数据 Extract & Enrichment
-- 构建 Insights Dashboard
+1. 需求分析及架构设计
+2. 数据 Extract & Enrichment
+3. 构建 Insights Dashboard
 ### 备战：Elastic 认证
-- Elastic 认证介绍
-- 考点梳理
+1. Elastic 认证介绍
+2. 考点梳理
