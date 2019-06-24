@@ -1,0 +1,144 @@
+
+<!-- saved from url=(0073)http://files.grouplens.org/datasets/movielens/ml-latest-small-README.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><h1>Summary</h1>
+
+<p>This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from <a href="http://movielens.org/">MovieLens</a>, a movie recommendation service. It contains 100836 ratings and 3683 tag applications across 9742 movies. These data were created by 610 users between March 29, 1996 and September 24, 2018. This dataset was generated on September 26, 2018.</p>
+
+<p>Users were selected at random for inclusion. All selected users had rated at least 20 movies. No demographic information is included. Each user is represented by an id, and no other information is provided.</p>
+
+<p>The data are contained in the files <code>links.csv</code>, <code>movies.csv</code>, <code>ratings.csv</code> and <code>tags.csv</code>. More details about the contents and use of all these files follows.</p>
+
+<p>This is a <em>development</em> dataset. As such, it may change over time and is not an appropriate dataset for shared research results. See available <em>benchmark</em> datasets if that is your intent.</p>
+
+<p>This and other GroupLens data sets are publicly available for download at <a href="http://grouplens.org/datasets/">http://grouplens.org/datasets/</a>.</p>
+
+<h1>Usage License</h1>
+
+<p>Neither the University of Minnesota nor any of the researchers involved can guarantee the correctness of the data, its suitability for any particular purpose, or the validity of results based on the use of the data set. The data set may be used for any research purposes under the following conditions:</p>
+
+<ul>
+<li>The user may not state or imply any endorsement from the University of Minnesota or the GroupLens Research Group.</li>
+<li>The user must acknowledge the use of the data set in publications resulting from the use of the data set (see below for citation information).</li>
+<li>The user may redistribute the data set, including transformations, so long as it is distributed under these same license conditions.</li>
+<li>The user may not use this information for any commercial or revenue-bearing purposes without first obtaining permission from a faculty member of the GroupLens Research Project at the University of Minnesota.</li>
+<li>The executable software scripts are provided "as is" without warranty of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The entire risk as to the quality and performance of them is with you. Should the program prove defective, you assume the cost of all necessary servicing, repair or correction.</li>
+</ul>
+
+<p>In no event shall the University of Minnesota, its affiliates or employees be liable to you for any damages arising out of the use or inability to use these programs (including but not limited to loss of data or data being rendered inaccurate).</p>
+
+<p>If you have any further questions or comments, please email <a href="mailto:grouplens-info@umn.edu">grouplens-info@umn.edu</a></p>
+
+<h1>Citation</h1>
+
+<p>To acknowledge use of the dataset in publications, please cite the following paper:</p>
+
+<blockquote>
+  <p>F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19. <a href="https://doi.org/10.1145/2827872">https://doi.org/10.1145/2827872</a></p>
+</blockquote>
+
+<h1>Further Information About GroupLens</h1>
+
+<p>GroupLens is a research group in the Department of Computer Science and Engineering at the University of Minnesota. Since its inception in 1992, GroupLens's research projects have explored a variety of fields including:</p>
+
+<ul>
+<li>recommender systems</li>
+<li>online communities</li>
+<li>mobile and ubiquitious technologies</li>
+<li>digital libraries</li>
+<li>local geographic information systems</li>
+</ul>
+
+<p>GroupLens Research operates a movie recommender based on collaborative filtering, MovieLens, which is the source of these data. We encourage you to visit <a href="http://movielens.org/">http://movielens.org</a> to try it out! If you have exciting ideas for experimental work to conduct on MovieLens, send us an email at <a href="mailto:grouplens-info@cs.umn.edu">grouplens-info@cs.umn.edu</a> - we are always interested in working with external collaborators.</p>
+
+<h1>Content and Use of Files</h1>
+
+<h2>Formatting and Encoding</h2>
+
+<p>The dataset files are written as <a href="http://en.wikipedia.org/wiki/Comma-separated_values">comma-separated values</a> files with a single header row. Columns that contain commas (<code>,</code>) are escaped using double-quotes (<code>"</code>). These files are encoded as UTF-8. If accented characters in movie titles or tag values (e.g. Misérables, Les (1995)) display incorrectly, make sure that any program reading the data, such as a text editor, terminal, or script, is configured for UTF-8.</p>
+
+<h2>User Ids</h2>
+
+<p>MovieLens users were selected at random for inclusion. Their ids have been anonymized. User ids are consistent between <code>ratings.csv</code> and <code>tags.csv</code> (i.e., the same id refers to the same user across the two files).</p>
+
+<h2>Movie Ids</h2>
+
+<p>Only movies with at least one rating or tag are included in the dataset. These movie ids are consistent with those used on the MovieLens web site (e.g., id <code>1</code> corresponds to the URL <a href="https://movielens.org/movies/1">https://movielens.org/movies/1</a>). Movie ids are consistent between <code>ratings.csv</code>, <code>tags.csv</code>, <code>movies.csv</code>, and <code>links.csv</code> (i.e., the same id refers to the same movie across these four data files).</p>
+
+<h2>Ratings Data File Structure (ratings.csv)</h2>
+
+<p>All ratings are contained in the file <code>ratings.csv</code>. Each line of this file after the header row represents one rating of one movie by one user, and has the following format:</p>
+
+<pre><code>userId,movieId,rating,timestamp
+</code></pre>
+
+<p>The lines within this file are ordered first by userId, then, within user, by movieId.</p>
+
+<p>Ratings are made on a 5-star scale, with half-star increments (0.5 stars - 5.0 stars).</p>
+
+<p>Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of January 1, 1970.</p>
+
+<h2>Tags Data File Structure (tags.csv)</h2>
+
+<p>All tags are contained in the file <code>tags.csv</code>. Each line of this file after the header row represents one tag applied to one movie by one user, and has the following format:</p>
+
+<pre><code>userId,movieId,tag,timestamp
+</code></pre>
+
+<p>The lines within this file are ordered first by userId, then, within user, by movieId.</p>
+
+<p>Tags are user-generated metadata about movies. Each tag is typically a single word or short phrase. The meaning, value, and purpose of a particular tag is determined by each user.</p>
+
+<p>Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of January 1, 1970.</p>
+
+<h2>Movies Data File Structure (movies.csv)</h2>
+
+<p>Movie information is contained in the file <code>movies.csv</code>. Each line of this file after the header row represents one movie, and has the following format:</p>
+
+<pre><code>movieId,title,genres
+</code></pre>
+
+<p>Movie titles are entered manually or imported from <a href="https://www.themoviedb.org/">https://www.themoviedb.org/</a>, and include the year of release in parentheses. Errors and inconsistencies may exist in these titles.</p>
+
+<p>Genres are a pipe-separated list, and are selected from the following:</p>
+
+<ul>
+<li>Action</li>
+<li>Adventure</li>
+<li>Animation</li>
+<li>Children's</li>
+<li>Comedy</li>
+<li>Crime</li>
+<li>Documentary</li>
+<li>Drama</li>
+<li>Fantasy</li>
+<li>Film-Noir</li>
+<li>Horror</li>
+<li>Musical</li>
+<li>Mystery</li>
+<li>Romance</li>
+<li>Sci-Fi</li>
+<li>Thriller</li>
+<li>War</li>
+<li>Western</li>
+<li>(no genres listed)</li>
+</ul>
+
+<h2>Links Data File Structure (links.csv)</h2>
+
+<p>Identifiers that can be used to link to other sources of movie data are contained in the file <code>links.csv</code>. Each line of this file after the header row represents one movie, and has the following format:</p>
+
+<pre><code>movieId,imdbId,tmdbId
+</code></pre>
+
+<p>movieId is an identifier for movies used by <a href="https://movielens.org/">https://movielens.org</a>. E.g., the movie Toy Story has the link <a href="https://movielens.org/movies/1">https://movielens.org/movies/1</a>.</p>
+
+<p>imdbId is an identifier for movies used by <a href="http://www.imdb.com/">http://www.imdb.com</a>. E.g., the movie Toy Story has the link <a href="http://www.imdb.com/title/tt0114709/">http://www.imdb.com/title/tt0114709/</a>.</p>
+
+<p>tmdbId is an identifier for movies used by <a href="https://www.themoviedb.org/">https://www.themoviedb.org</a>. E.g., the movie Toy Story has the link <a href="https://www.themoviedb.org/movie/862">https://www.themoviedb.org/movie/862</a>.</p>
+
+<p>Use of the resources listed above is subject to the terms of each provider.</p>
+
+<h2>Cross-Validation</h2>
+
+<p>Prior versions of the MovieLens dataset included either pre-computed cross-folds or scripts to perform this computation. We no longer bundle either of these features with the dataset, since most modern toolkits provide this as a built-in feature. If you wish to learn about standard approaches to cross-fold computation in the context of recommender systems evaluation, see <a href="http://lenskit.org/">LensKit</a> for tools, documentation, and open-source code examples.</p>
+</body></html>
