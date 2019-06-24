@@ -4,7 +4,7 @@
 1. 课程介绍
 2. 课程综述及学习建议
 3. Elasticsearch 简介及其发展历史
-4. Elastic Stack 家族成员其应用场景
+4. Elastic Stack 家族成员及其应用场景
 ### 第 2 章：安装上手
 1. Elasticsearch 的安装与简单配置
 2. Kibana 的安装与界面快速浏览
