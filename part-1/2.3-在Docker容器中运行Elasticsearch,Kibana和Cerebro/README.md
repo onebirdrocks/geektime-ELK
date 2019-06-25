@@ -38,3 +38,4 @@ $docker restart name/ID
 - 如何在为docker image安装 Elasticsearch 插件 - https://www.elastic.co/cn/blog/elasticsearch-docker-plugin-management
 - 如何设置 Docker 网络 - https://www.elastic.co/cn/blog/docker-networking
 - Cerebro 源码 https://github.com/lmenezes/cerebro
+- 一个开源的 ELK（Elasticsearch + Logstash + Kibana） docker-compose 配置 https://github.com/deviantony/docker-elk
