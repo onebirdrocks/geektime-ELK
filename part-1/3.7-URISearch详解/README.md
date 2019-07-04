@@ -71,8 +71,8 @@ GET /movies/_search?q=title:(Beautiful %2BMind)
 }
 
 
-//范围查询 ,区间写法 / 数学写法
-GET /movies/_search?q=title:beautiful AND year:[2002 TO 2018]
+//范围查询 ,区间写法
+GET /movies/_search?q=title:beautiful AND year:[2002 TO 2018%7D
 {
 	"profile":"true"
 }
