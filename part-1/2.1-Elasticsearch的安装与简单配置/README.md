@@ -1,9 +1,10 @@
 # Elasticsearch 的安装与简单配置
 ## 课程Demo
 ```
-//启动单节点
+#启动单节点
 bin/elasticsearch -E node.name=node0 -E cluster.name=geektime -E path.data=node0_data
-//安装插件
+
+#安装插件
 bin/elasticsearch-plugin install analysis-icu
 
 //查看插件
