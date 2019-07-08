@@ -7,20 +7,20 @@ bin/elasticsearch -E node.name=node0 -E cluster.name=geektime -E path.data=node0
 #安装插件
 bin/elasticsearch-plugin install analysis-icu
 
-//查看插件
+#查看插件
 bin/elasticsearch-plugin list
-//查看安装的插件
+#查看安装的插件
 GET http://localhost:9200/_cat/plugins?v
 
-//start multi-nodes Cluster
+#start multi-nodes Cluster
 bin/elasticsearch -E node.name=node0 -E cluster.name=geektime -E path.data=node0_data
 bin/elasticsearch -E node.name=node1 -E cluster.name=geektime -E path.data=node1_data
 bin/elasticsearch -E node.name=node2 -E cluster.name=geektime -E path.data=node2_data
 bin/elasticsearch -E node.name=node3 -E cluster.name=geektime -E path.data=node3_data
 
-//查看集群
+#查看集群
 GET http://localhost:9200
-//查看nodes
+#查看nodes
 GET _cat/nodes
 GET _cluster/health
 
