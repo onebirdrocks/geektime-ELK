@@ -1,4 +1,10 @@
 # Space Jam，一次全文搜索的实例
+
+## 环境要求
+- Python 2.7.15
+- 可以使用pyenv管理多个python版本（可选）
+
+
 ## 课程demo
 ```
 POST tmdb/_search
@@ -27,3 +33,9 @@ POST tmdb/_search
     }
 }
 ```
+
+## 相关
+- Windows 安装 pyenv https://github.com/pyenv-win/pyenv-win
+- Mac 安装pyenv https://segmentfault.com/a/1190000017403221
+- Linux 安装 pyenv https://blog.csdn.net/GX_1_11_real/article/details/80237064
+- Python.org https://www.python.org/
