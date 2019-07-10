@@ -4,7 +4,10 @@
 - Python 2.7.15
 - 可以使用pyenv管理多个python版本（可选）
 
-
+## 进入 tmdb-search目录
+Run
+pip install -r requirements.txt
+Run python ./ingest_tmdb_from_file.py
 ## 课程demo
 ```
 POST tmdb/_search
