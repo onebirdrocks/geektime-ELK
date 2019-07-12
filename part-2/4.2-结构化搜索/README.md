@@ -115,7 +115,7 @@ POST products/_search
 
 
 
-#Null 数值
+#exists查询
 POST products/_search
 {
   "query": {
