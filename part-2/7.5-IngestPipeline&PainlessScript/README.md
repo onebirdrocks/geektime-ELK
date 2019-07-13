@@ -309,5 +309,7 @@ GET tech_blogs/_search
 ```
 
 ## 相关阅读
+- https://www.elastic.co/guide/en/elasticsearch/reference/7.1/ingest-apis.html
+- https://www.elastic.co/guide/en/elasticsearch/reference/7.1/ingest-processors.html
 - https://www.elastic.co/guide/en/elasticsearch/painless/7.1/painless-lang-spec.html
 - https://www.elastic.co/guide/en/elasticsearch/painless/7.1/painless-api-reference.html
