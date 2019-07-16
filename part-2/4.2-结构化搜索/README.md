@@ -3,7 +3,7 @@
 ## 课程demo
 ```
 
-#结构花搜索，精确匹配
+#结构化搜索，精确匹配
 DELETE products
 POST /products/_bulk
 { "index": { "_id": 1 }}
