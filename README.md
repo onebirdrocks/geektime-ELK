@@ -1,4 +1,5 @@
 # 《Elasticsearch 核心技术与实战》
+https://github.com/onebirdrocks/geektime-ELK/
 ## 第一部分：初识 Elasticsearch
 ### 第 1 章：概述
 1. 课程介绍
@@ -58,10 +59,11 @@
 ### 第 7 章：数据建模
 1. 对象及 Nested 对象
 2. 文档的父子关系
-3. Elasticsearch 数据建模最佳实践
-4. Update By Query & Reindex API
-5. Ingest Pipeline & Painless Script
-6. 第二部分总结回顾
+3. Update By Query & Reindex API
+4. Ingest Pipeline & Painless Script
+6. Elasticsearch 数据建模实例
+6. Elasticsearch 数据建模最佳实践
+7. 第二部分总结回顾
 ## 第三部分：管理 Elasticsearch 集群
 ### 第 8 章：保护你的数据
 1. 集群身份认证与用户鉴权

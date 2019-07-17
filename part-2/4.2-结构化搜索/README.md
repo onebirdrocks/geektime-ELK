@@ -3,7 +3,7 @@
 ## 课程demo
 ```
 
-#结构花搜索，精确匹配
+#结构化搜索，精确匹配
 DELETE products
 POST /products/_bulk
 { "index": { "_id": 1 }}
@@ -115,7 +115,7 @@ POST products/_search
 
 
 
-#Null 数值
+#exists查询
 POST products/_search
 {
   "query": {
@@ -304,3 +304,6 @@ POST products/_search
 
 
 ```
+## 相关阅读
+https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-exists-query.html
+https://www.elastic.co/guide/en/elasticsearch/reference/7.1/term-level-queries.html

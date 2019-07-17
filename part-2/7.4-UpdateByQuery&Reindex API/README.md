@@ -206,5 +206,7 @@ POST  _reindex
 
 GET _tasks?detailed=true&actions=*reindex
 
-
 ```
+## 相关阅读
+- https://www.elastic.co/guide/en/elasticsearch/reference/7.1/docs-reindex.html
+- https://www.elastic.co/guide/en/elasticsearch/reference/7.1/docs-update-by-query.html

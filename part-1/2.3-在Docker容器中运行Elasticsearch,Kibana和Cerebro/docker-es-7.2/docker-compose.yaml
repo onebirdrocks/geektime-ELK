@@ -29,7 +29,7 @@ services:
       - node.name=es72_01
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - discovery.seed_hosts=es72_01
+      - discovery.seed_hosts=es72_01,es72_02
       - network.publish_host=elasticsearch
       - cluster.initial_master_nodes=es72_01,es72_02
     ulimits:
@@ -50,7 +50,7 @@ services:
       - node.name=es72_02
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - discovery.seed_hosts=es72_01
+      - discovery.seed_hosts=es72_01,es72_02
       - network.publish_host=elasticsearch
       - cluster.initial_master_nodes=es72_01,es72_02
     ulimits:

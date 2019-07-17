@@ -75,5 +75,4 @@ GET /users,cluster1:users,cluster2:users/_search
 ```
 
 # 相关阅读
-
 - 在Kibana中使用Cross data search https://kelonsoftware.com/cross-cluster-search-kibana/

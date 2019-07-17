@@ -227,3 +227,5 @@ POST my_movies/_search
 }
 
 ```
+## 相关阅读
+- https://www.elastic.co/guide/en/elasticsearch/reference/7.1/query-dsl-nested-query.html
