@@ -4,6 +4,10 @@
 - 设置 Kibana与ElasticSearch通信鉴权
 - 使用安全API创建对特定索引具有有限访问权限的用户
 
+This tutorial involves a single node cluster, but if you had multiple nodes, you would enable Elasticsearch security features on every node in the cluster and configure Transport Layer Security (TLS) for internode-communication, which is beyond the scope of this tutorial. By enabling single-node discovery, we are postponing the configuration of TLS. For example, add the following setting:
+
+discovery.type: single-node
+
 ## 课程demo
 ```
 #启动单节点
@@ -27,5 +31,40 @@ curl -u elastic 'localhost:9200/_cat/nodes?pretty'
 
 #启动。使用用户名，elastic，密码elastic
 ./bin/kibana
+
+
+POST orders/_bulk
+{"index":{}}
+{"product" : "1","price" : 18,"payment" : "master","card" : "9876543210123456","name" : "jack"}
+{"index":{}}
+{"product" : "2","price" : 99,"payment" : "visa","card" : "1234567890123456","name" : "bob"}
+
+
+#create a new role named read_only_orders, that satisfies the following criteria:
+#The role has no cluster privileges
+#The role only has access to indices that match the pattern sales_record
+#The index privileges are read, and view_index_metadata
+Using the Security API,
+
+
+#create sales_user that satisfies the following criteria:
+#Password is elastic
+#The name of the user is "Order Viewer"
+# Use your own email address
+# Assign the user to two roles: read_only_orders and kibana_user
+Using the Security API, create a new user named
+
+
+#验证权限,可以执行
+POST orders/_search
+{}
+
+#验证权限,报错
+POST orders/_bulk
+{"index":{}}
+{"product" : "1","price" : 18,"payment" : "master","card" : "9876543210123456","name" : "jack"}
+{"index":{}}
+{"product" : "2","price" : 99,"payment" : "visa","card" : "1234567890123456","name" : "bob"}
+
 
 ```
