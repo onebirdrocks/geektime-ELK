@@ -1,4 +1,4 @@
-
+# Bucket & Metric Aggregation
 ## demos
 ```
 DELETE /employees
@@ -139,7 +139,7 @@ POST employees/_search
 {
   "size": 0,
   "aggs": {
-    "NAME": {
+    "jobs": {
       "terms": {
         "field":"job.keyword"
       }
@@ -154,7 +154,7 @@ POST employees/_search
 {
   "size": 0,
   "aggs": {
-    "NAME": {
+    "jobs": {
       "terms": {
         "field":"job"
       }
@@ -166,7 +166,7 @@ POST employees/_search
 PUT employees/_mapping
 {
   "properties" : {
-    "job":{
+    "jobs":{
        "type":     "text",
        "fielddata": true
     }
@@ -179,7 +179,7 @@ POST employees/_search
 {
   "size": 0,
   "aggs": {
-    "NAME": {
+    "jobs": {
       "terms": {
         "field":"job"
       }
@@ -187,12 +187,12 @@ POST employees/_search
   }
 }
 
-
+# 对 keyword 进行聚合
 POST employees/_search
 {
   "size": 0,
   "aggs": {
-    "NAME": {
+    "gender": {
       "terms": {
         "field":"gender"
       }
@@ -201,11 +201,12 @@ POST employees/_search
 }
 
 
+#指定 bucket 的 size
 POST employees/_search
 {
   "size": 0,
   "aggs": {
-    "NAME": {
+    "ages_5": {
       "terms": {
         "field":"age",
         "size":5
@@ -214,6 +215,85 @@ POST employees/_search
   }
 }
 
+
+
+# 不同工种中，年纪最大的3个员工的具体信息
+POST employees/_search
+{
+  "size": 0,
+  "aggs": {
+    "jobs": {
+      "terms": {
+        "field":"job.keyword"
+      },
+      "aggs":{
+        "old_employee":{
+          "top_hits":{
+            "size":3,
+            "sort":[
+              {
+                "age":{
+                  "order":"desc"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+#Salary Ranges
+POST employees/_search
+{
+  "size": 0,
+  "aggs": {
+    "salary_range": {
+      "range": {
+        "field":"salary",
+        "ranges":[
+          {
+            "to":10000
+          },
+          {
+            "from":10000,
+            "to":20000
+          },
+          {
+            "key":">2000",
+            "from":20000
+          }
+        ]
+      }
+    }
+  }
+}
+
+
+#Salary Histogram,工资0到10万，5000一个区间进行分桶
+POST employees/_search
+{
+  "size": 0,
+  "aggs": {
+    "salary_histrogram": {
+      "histogram": {
+        "field":"salary",
+        "interval":5000,
+        "extended_bounds":{
+          "min":0,
+          "max":100000
+
+        }
+      }
+    }
+  }
+}
+
+
+# 嵌套聚合1，按照工作类型分桶，并统计工资信息
 POST employees/_search
 {
   "size": 0,
@@ -233,7 +313,7 @@ POST employees/_search
   }
 }
 
-
+# 根据工作类型分桶，然后按照性别分桶，计算工资的统计信息
 POST employees/_search
 {
   "size": 0,
@@ -252,60 +332,6 @@ POST employees/_search
               "stats": {
                 "field": "salary"
               }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-
-
-
-POST /bigginsight/_search?size=0
-{
-  "aggs": {
-    "by_usage": {
-      "histogram": {
-        "field": "usage",
-        "interval": 1000
-      }
-    }
-  }
-}
-
-
-POST /bigginsight/_search?size=0
-{
-  "aggs": {
-    "by_usage": {
-      "range": {
-        "field": "usage",
-        "ranges": [
-          { "to": 1024 },
-          { "from": 1024, "to": 102400 },
-          { "from": 102400 }
-        ]
-      }
-    }
-  }
-}
-
-
-
-GET bigginsight/_search?size=0
-{
-  "aggs": {
-    "messages": {
-      "filters": {
-        "filters": {
-          "chat": { "match": { "category": "Chat" }},              
-          "skype": { "match": { "application": "Skype" }},         
-          "other_than_skype": {                                    
-            "bool": {
-              "must": {"match": {"category": "Chat"}},
-              "must_not": {"match": {"application": "Skype"}}
             }
           }
         }
