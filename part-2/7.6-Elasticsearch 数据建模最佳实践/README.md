@@ -415,3 +415,8 @@ POST ratings/_search
 
 
 ```
+
+## 相关阅读
+- https://www.elastic.co/guide/en/elasticsearch/reference/7.1/general-recommendations.html
+- https://www.elastic.co/guide/en/elasticsearch/reference/7.1/tune-for-disk-usage.html
+- https://www.elastic.co/guide/en/elasticsearch/reference/7.1/tune-for-search-speed.html

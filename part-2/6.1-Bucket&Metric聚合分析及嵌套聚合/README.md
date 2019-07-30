@@ -260,6 +260,60 @@ POST employees/_search
   }
 }
 
+
+
+
+POST /bigginsight/_search?size=0
+{
+  "aggs": {
+    "by_usage": {
+      "histogram": {
+        "field": "usage",
+        "interval": 1000
+      }
+    }
+  }
+}
+
+
+POST /bigginsight/_search?size=0
+{
+  "aggs": {
+    "by_usage": {
+      "range": {
+        "field": "usage",
+        "ranges": [
+          { "to": 1024 },
+          { "from": 1024, "to": 102400 },
+          { "from": 102400 }
+        ]
+      }
+    }
+  }
+}
+
+
+
+GET bigginsight/_search?size=0
+{
+  "aggs": {
+    "messages": {
+      "filters": {
+        "filters": {
+          "chat": { "match": { "category": "Chat" }},              
+          "skype": { "match": { "application": "Skype" }},         
+          "other_than_skype": {                                    
+            "bool": {
+              "must": {"match": {"category": "Chat"}},
+              "must_not": {"match": {"application": "Skype"}}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 ```
 
 ## 相关阅读
