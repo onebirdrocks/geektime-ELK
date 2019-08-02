@@ -26,7 +26,7 @@ GET _cluster/health
 
 ```
 ## 相关阅读
-- 安装指南 https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.
+- 安装指南 https://www.elastic.co/guide/en/elasticsearch/reference/7.1/install-elasticsearch.html
 - Elastic Support Matrix(OS / JDK ) https://www.elastic.co/cn/support/matrix
 - Elasticsearch 的一些重要配置 https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/settings.html
