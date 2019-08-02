@@ -48,8 +48,7 @@ bin/elasticsearch  -E node.name=node2 -E cluster.name=geektime -E path.data=node
 PUT _cluster/settings
 {
   "persistent": {
-    "cluster.routing.allocation.awareness.attributes": "my_rack_id",
-    "cluster.routing.allocation.awareness.force.zone.values": "rack1,rack2"
+    "cluster.routing.allocation.awareness.attributes": "my_rack_id"
   }
 }
 

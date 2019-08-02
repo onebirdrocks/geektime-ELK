@@ -24,10 +24,10 @@ curl -u elastic 'localhost:9200/_cat/nodes?pretty'
 #设置 ES与Kibana之间的鉴权通信
 ./bin/kibana-keystore create
 
-# 运行下面命令。按照提示，输入“kibana”
-./bin/kibana-keystore add elasticsearch.username
-#运行后，输入之前为kibana所设置的密码
-./bin/kibana-keystore add elasticsearch.password
+
+# 修改 kibana.yml
+elasticsearch.username: "kibana"
+elasticsearch.password: "changeme"
 
 #启动。使用用户名，elastic，密码elastic
 ./bin/kibana
@@ -44,22 +44,18 @@ POST orders/_bulk
 #The role has no cluster privileges
 #The role only has access to indices that match the pattern sales_record
 #The index privileges are read, and view_index_metadata
-Using the Security API,
 
 
 #create sales_user that satisfies the following criteria:
-#Password is elastic
-#The name of the user is "Order Viewer"
 # Use your own email address
 # Assign the user to two roles: read_only_orders and kibana_user
-Using the Security API, create a new user named
 
 
-#验证权限,可以执行
+#验证读权限,可以执行
 POST orders/_search
 {}
 
-#验证权限,报错
+#验证写权限,报错
 POST orders/_bulk
 {"index":{}}
 {"product" : "1","price" : 18,"payment" : "master","card" : "9876543210123456","name" : "jack"}
@@ -68,3 +64,6 @@ POST orders/_bulk
 
 
 ```
+
+## 相关阅读
+- https://www.elastic.co/guide/en/elasticsearch/reference/7.1/configuring-security.html

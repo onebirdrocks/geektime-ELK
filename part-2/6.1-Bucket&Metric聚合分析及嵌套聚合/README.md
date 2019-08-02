@@ -148,6 +148,18 @@ POST employees/_search
 }
 
 
+POST employees/_search
+{
+  "size": 0,
+  "aggs": {
+    "jobs": {
+      "terms": {
+        "field":"job.keyword"
+      }
+    }
+  }
+}
+
 
 # 对 Text 字段进行 terms 分词，失败
 POST employees/_search
@@ -186,6 +198,21 @@ POST employees/_search
     }
   }
 }
+
+
+# 找到不同的job的总数
+POST employees/_search
+{
+  "size": 0,
+  "aggs": {
+    "cardinate": {
+      "cardinality": {
+        "field": "job.keyword"
+      }
+    }
+  }
+}
+
 
 # 对 keyword 进行聚合
 POST employees/_search
