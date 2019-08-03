@@ -88,6 +88,10 @@ POST my_blogs/_search
 
 }
 
+
+#根据父文档ID查看
+GET my_blogs/_doc/blog2
+
 # Parent Id 查询
 POST my_blogs/_search
 {
@@ -99,7 +103,7 @@ POST my_blogs/_search
   }
 }
 
-# Has Child 查询
+# Has Child 查询,返回父文档
 POST my_blogs/_search
 {
   "query": {
@@ -115,7 +119,7 @@ POST my_blogs/_search
 }
 
 
-# Has Parent 查询
+# Has Parent 查询，返回相关的子文档
 POST my_blogs/_search
 {
   "query": {
@@ -130,19 +134,23 @@ POST my_blogs/_search
   }
 }
 
+
+
 #通过ID ，访问子文档
 GET my_blogs/_doc/comment3
-
 #通过ID和routing ，访问子文档
 GET my_blogs/_doc/comment3?routing=blog2
 
 #更新子文档
-POST my_blogs/comment3/_update?routing=blog2
+PUT my_blogs/_doc/comment3?routing=blog2
 {
-  "doc":{
-    "comment":"Hello Hadoop??"
-  }
+    "comment": "Hello Hadoop??",
+    "blog_comments_relation": {
+      "name": "comment",
+      "parent": "blog2"
+    }
 }
+
 
 ```
 ## 相关阅读
