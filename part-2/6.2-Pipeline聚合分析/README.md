@@ -1,7 +1,7 @@
 # Pipeline 聚合分析
 ## 课程 demo
 ```
-
+DELETE employees
 PUT /employees/_bulk
 { "index" : {  "_id" : "1" } }
 { "name" : "Emma","age":32,"job":"Product Manager","gender":"female","salary":35000 }
@@ -265,7 +265,6 @@ POST employees/_search
     }
   }
 }
-
 
 ```
 ## 相关阅读

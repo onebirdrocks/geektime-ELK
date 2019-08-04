@@ -21,9 +21,6 @@ bin/elasticsearch-setup-passwords interactive
 
 curl -u elastic 'localhost:9200/_cat/nodes?pretty'
 
-#设置 ES与Kibana之间的鉴权通信
-./bin/kibana-keystore create
-
 
 # 修改 kibana.yml
 elasticsearch.username: "kibana"

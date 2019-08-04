@@ -7,12 +7,6 @@ PUT test/_doc/1
   "content":"Hello World"
 }
 
-PUT test/_doc/2
-{
-  "content":"hello world"
-}
-
-
 POST test/_search
 {
   "profile": "true",
@@ -28,12 +22,30 @@ POST test/_search
   "profile": "true",
   "query": {
     "match": {
+      "content": "hello world"
+    }
+  }
+}
+
+POST test/_search
+{
+  "profile": "true",
+  "query": {
+    "match": {
       "content.keyword": "Hello World"
     }
   }
 }
 
-
+POST test/_search
+{
+  "profile": "true",
+  "query": {
+    "match": {
+      "content.keyword": "hello world"
+    }
+  }
+}
 
 POST test/_search
 {
@@ -50,8 +62,20 @@ POST test/_search
   "profile": "true",
   "query": {
     "term": {
+      "content": "hello world"
+    }
+  }
+}
+
+POST test/_search
+{
+  "profile": "true",
+  "query": {
+    "term": {
       "content.keyword": "Hello World"
     }
   }
 }
+
+
 ```

@@ -73,7 +73,7 @@ PUT /employees/_bulk
 { "index" : {  "_id" : "20" } }
 { "name" : "Kathy","age":29,"job":"DBA","gender":"female","salary": 20000}
 
-
+# Metric 聚合，找到最低的工资
 POST employees/_search
 {
   "size": 0,
@@ -86,6 +86,7 @@ POST employees/_search
   }
 }
 
+# Metric 聚合，找到最高的工资
 POST employees/_search
 {
   "size": 0,
@@ -98,6 +99,7 @@ POST employees/_search
   }
 }
 
+# 多个 Metric 聚合，找到最低最高和平均工资
 POST employees/_search
 {
   "size": 0,
@@ -120,7 +122,7 @@ POST employees/_search
   }
 }
 
-
+# 一个聚合，输出多值
 POST employees/_search
 {
   "size": 0,
@@ -135,6 +137,8 @@ POST employees/_search
 
 
 
+
+# 对keword 进行聚合
 POST employees/_search
 {
   "size": 0,
@@ -148,20 +152,7 @@ POST employees/_search
 }
 
 
-POST employees/_search
-{
-  "size": 0,
-  "aggs": {
-    "jobs": {
-      "terms": {
-        "field":"job.keyword"
-      }
-    }
-  }
-}
-
-
-# 对 Text 字段进行 terms 分词，失败
+# 对 Text 字段进行 terms 聚合查询，失败
 POST employees/_search
 {
   "size": 0,
@@ -178,7 +169,7 @@ POST employees/_search
 PUT employees/_mapping
 {
   "properties" : {
-    "jobs":{
+    "job":{
        "type":     "text",
        "fielddata": true
     }
@@ -199,22 +190,34 @@ POST employees/_search
   }
 }
 
-
-# 找到不同的job的总数
 POST employees/_search
 {
   "size": 0,
   "aggs": {
-    "cardinate": {
-      "cardinality": {
-        "field": "job.keyword"
+    "jobs": {
+      "terms": {
+        "field":"job.keyword"
       }
     }
   }
 }
 
 
-# 对 keyword 进行聚合
+# 对job.keyword 和 job 进行 terms 聚合，分桶的总数并不一样
+POST employees/_search
+{
+  "size": 0,
+  "aggs": {
+    "cardinate": {
+      "cardinality": {
+        "field": "job"
+      }
+    }
+  }
+}
+
+
+# 对 性别的 keyword 进行聚合
 POST employees/_search
 {
   "size": 0,
@@ -236,7 +239,7 @@ POST employees/_search
     "ages_5": {
       "terms": {
         "field":"age",
-        "size":5
+        "size":3
       }
     }
   }
@@ -244,7 +247,7 @@ POST employees/_search
 
 
 
-# 不同工种中，年纪最大的3个员工的具体信息
+# 指定size，不同工种中，年纪最大的3个员工的具体信息
 POST employees/_search
 {
   "size": 0,
@@ -273,7 +276,7 @@ POST employees/_search
 
 
 
-#Salary Ranges
+#Salary Ranges 分桶，可以自己定义 key
 POST employees/_search
 {
   "size": 0,
@@ -290,7 +293,7 @@ POST employees/_search
             "to":20000
           },
           {
-            "key":">2000",
+            "key":">20000",
             "from":20000
           }
         ]
@@ -300,7 +303,7 @@ POST employees/_search
 }
 
 
-#Salary Histogram,工资0到10万，5000一个区间进行分桶
+#Salary Histogram,工资0到10万，以 5000一个区间进行分桶
 POST employees/_search
 {
   "size": 0,
@@ -340,7 +343,7 @@ POST employees/_search
   }
 }
 
-# 根据工作类型分桶，然后按照性别分桶，计算工资的统计信息
+# 多次嵌套。根据工作类型分桶，然后按照性别分桶，计算工资的统计信息
 POST employees/_search
 {
   "size": 0,
