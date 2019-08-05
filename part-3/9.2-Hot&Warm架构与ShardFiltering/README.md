@@ -66,6 +66,11 @@ PUT my_index1/_doc/1
 }
 
 
+GET _cat/shards?v
+DELETE my_index1/_doc/1
+
+
+
 # Fore awareness
 # 标记一个 rack 1
 bin/elasticsearch  -E node.name=node1 -E cluster.name=geektime -E path.data=node1_data -E node.attr.my_rack_id=rack1
@@ -78,7 +83,7 @@ PUT _cluster/settings
 {
   "persistent": {
     "cluster.routing.allocation.awareness.attributes": "my_rack_id",
-    "cluster.routing.allocation.awareness.force.zone.values": "rack1,rack2"
+    "cluster.routing.allocation.awareness.force.my_rack_id.values": "rack1,rack2"
   }
 }
 GET _cluster/settings

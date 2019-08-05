@@ -24,7 +24,7 @@ openssl pkcs12 -in elastic-certificates.p12 -cacerts -nokeys -out elastic-ca.pem
 
 
 elasticsearch.hosts: ["https://localhost:9200"]
-elasticsearch.ssl.certificateAuthorities: [ "/Users/yiruan/geektime/kibana-7.1.0/config/elastic-ca.pem" ]
+elasticsearch.ssl.certificateAuthorities: [ "/Users/yiruan/geektime/kibana-7.1.0/config/certs/elastic-ca.pem" ]
 elasticsearch.ssl.verificationMode: certificate
 
 
@@ -34,8 +34,8 @@ elasticsearch.ssl.verificationMode: certificate
 bin/elasticsearch-certutil ca --pem
 
 server.ssl.enabled: true
-server.ssl.certificate: config/instance.crt
-server.ssl.key: config/instance.key
+server.ssl.certificate: config/certs/instance.crt
+server.ssl.key: config/certs/instance.key
 
 
 ```
