@@ -7,3 +7,5 @@ bin/elasticsearch -E node.name=node2 -E cluster.name=geektime -E path.data=node2
 bin/elasticsearch -E node.name=node3 -E cluster.name=geektime -E path.data=node3_data
 
 ```
+## 相关阅读
+- https://www.elastic.co/cn/blog/a-new-era-for-cluster-coordination-in-elasticsearch
