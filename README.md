@@ -1,5 +1,6 @@
 # 《Elasticsearch 核心技术与实战》
-https://github.com/onebirdrocks/geektime-ELK/
+Github 地址 https://github.com/onebirdrocks/geektime-ELK/
+极客时间：《Elasticsearch核心技术与实战》视频课程购买地址 - https://time.geekbang.org/course/intro/197
 ## 第一部分：初识 Elasticsearch
 ### 第 1 章：概述
 1. 课程介绍
