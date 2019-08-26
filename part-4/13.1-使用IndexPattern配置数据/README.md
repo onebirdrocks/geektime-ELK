@@ -1,5 +1,10 @@
+
 ## 课程demo
 ```
+
+localhost:5601/status
+
+
 PUT /shakespeare
 {
   "mappings": {
@@ -72,5 +77,8 @@ Invoke-RestMethod "http://localhost:9200/bank/account/_bulk?pretty" -Method Post
 Invoke-RestMethod "http://localhost:9200/shakespeare/_bulk?pretty" -Method Post -ContentType 'application/x-ndjson' -InFile "shakespeare.json"
 Invoke-RestMethod "http://localhost:9200/_bulk?pretty" -Method Post -ContentType 'application/x-ndjson' -InFile "logs.jsonl"
 
+
+
+GET /_cat/indices?v
 
 ```

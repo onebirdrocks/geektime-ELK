@@ -273,26 +273,6 @@ POST /apache_logs/_rollover/apache-logs2
 GET /apache_logs
 
 
-
-GET _cluster/health
-GET _cat/allocation?v
-GET _cat/allocation/_explain?v
-GET /my_source_index/_settings
-
-GET _cat/shards?h=index,shard,prirep,state,unassigned.reason| grepUNASSIGNED
-
-
-
-DELETE *
-
-
-
-
-
-
-GET _cat/recovery?v
-GET _cat/recovery?v&h=i,s,t,ty,st,shost,thost,f,fp,b,bp
-GET /_shard_stores
 ```
 ## 相关阅读
 - https://www.elastic.co/guide/en/elasticsearch/reference/7.1/indices-shrink-index.html
