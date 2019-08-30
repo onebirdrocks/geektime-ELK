@@ -21,6 +21,7 @@ GET _nodes/thread_pool
 GET _nodes/stats/thread_pool
 GET _cat/thread_pool?v
 GET _nodes/hot_threads
+GET _nodes/stats/thread_pool
 
 
 # 设置 Index Slowlogs
@@ -41,19 +42,20 @@ PUT my_index/_settings
 
 # 设置查询
 DELETE my_index
-PUT my_index
 //"0" logs all queries
-PUT my_index/_settings
+PUT my_index/
 {
-  "index.search.slowlog.threshold":{
-    "query.warn":"10s",
-    "query.info":"3s",
-    "query.debug":"2s",
-    "query.trace":"0s",
-    "fetch.warn":"1s",
-    "fetch.info":"600ms",
-    "fetch.debug":"400ms",
-    "fetch.trace": "0s"
+  "settings": {
+    "index.search.slowlog.threshold": {
+      "query.warn": "10s",
+      "query.info": "3s",
+      "query.debug": "2s",
+      "query.trace": "0s",
+      "fetch.warn": "1s",
+      "fetch.info": "600ms",
+      "fetch.debug": "400ms",
+      "fetch.trace": "0s"
+    }
   }
 }
 
