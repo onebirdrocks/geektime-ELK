@@ -1,5 +1,6 @@
 # 《Elasticsearch 核心技术与实战》
-https://github.com/onebirdrocks/geektime-ELK/
+- Github 地址 https://github.com/onebirdrocks/geektime-ELK/
+- 极客时间：《Elasticsearch核心技术与实战》视频课程购买地址 - https://time.geekbang.org/course/intro/197
 ## 第一部分：初识 Elasticsearch
 ### 第 1 章：概述
 1. 课程介绍
@@ -62,8 +63,8 @@ https://github.com/onebirdrocks/geektime-ELK/
 3. Update By Query & Reindex API
 4. Ingest Pipeline & Painless Script
 6. Elasticsearch 数据建模实例
-6. Elasticsearch 数据建模最佳实践
-7. 第二部分总结回顾
+7. Elasticsearch 数据建模最佳实践
+8. 第二部分总结回顾
 ## 第三部分：管理 Elasticsearch 集群
 ### 第 8 章：保护你的数据
 1. 集群身份认证与用户鉴权
@@ -74,8 +75,8 @@ https://github.com/onebirdrocks/geektime-ELK/
 2. Hot & Warm 架构与 Shard Filtering
 3. 如何对集群进行容量规划
 4. 分片设计及管理
-5. 在公有云上管理与部署 Elasticsearch 集群
-6. 在私有云上管理 Elasticsearch 集群的一些方法
+5. 在私有云上管理 Elasticsearch 集群的一些方法
+6. 在公有云上管理与部署 Elasticsearch 集群
 ### 第 10 章：生产环境中的集群运维
 1. 集群健康与问题排查
 2. 生产环境常用配置与上线清单
