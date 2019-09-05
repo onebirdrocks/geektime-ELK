@@ -28,8 +28,6 @@ curl -X DELETE localhost:8080/demo/delete -d id=15
 
 mysql-demo.conf
 
-
-
 # 创建 alias，只显示没有被标记 deleted的用户
 POST /_aliases
 {
