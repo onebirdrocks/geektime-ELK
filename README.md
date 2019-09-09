@@ -78,15 +78,16 @@
 5. 在私有云上管理 Elasticsearch 集群的一些方法
 6. 在公有云上管理与部署 Elasticsearch 集群
 ### 第 10 章：生产环境中的集群运维
-1. 集群健康与问题排查
-2. 生产环境常用配置与上线清单
-3. 监控 Elasticsearch 集群
-4. 诊断集群的潜在问题  
-5. 解决集群 Yellow 与 Red 的问题
-6. 集群压力测试
-7. 段合并优化及注意事项
-8. 缓存及使用 Breaker 限制内存使用
-9. 一些运维的相关建议
+1. 生产环境常用配置与上线清单
+2. 监控 Elasticsearch 集群
+3. 诊断集群的潜在问题  
+4. 解决集群 Yellow 与 Red 的问题
+5. 提升集群写性能
+6. 提升进群读性能
+7. 集群压力测试
+8. 段合并优化及注意事项
+9. 缓存及使用 Breaker 限制内存使用
+10. 一些运维的相关建议
 ### 第 11 章：索引生命周期管理
 1. 使用 Shrink 与 Rollover API 有效管理时间序列索引
 2. 索引全生命周期管理及工具介绍   
@@ -98,8 +99,7 @@
 1. 使用 Index Pattern 配置数据
 2. 使用 Kibana Discover 探索数据
 3. 基本可视化组件介绍
-4. Visual Builder 介绍
-5. 构建 Dashboard  
+4. 构建 Dashboard  
 ## 第 14 章：探索 X-Pack 套件
 1. 用 Monitoring 和 Alerting 监控 Elasticsearch 集群
 2. 用 APM 进行程序性能监控
