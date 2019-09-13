@@ -103,16 +103,17 @@
 ## 第 14 章：探索 X-Pack 套件
 1. 用 Monitoring 和 Alerting 监控 Elasticsearch 集群
 2. 用 APM 进行程序性能监控
-3. 用机器学习实现时序数据的异常检测
-4. 用 ELK 进行日志管理
-5. 用 Canvas 做数据演示
-6. 用 Graph 进行数据分析
-7. 用 Timelion 分析时序型数据
+3. 用机器学习实现时序数据的异常检测（上）
+4. 用机器学习实现时序数据的异常检测(下）
+5. 用 ELK 进行日志管理
+6. 用 Canvas 做数据演示
+
 ## 第五部分：应用实战工作坊  
 ### 实战 1：电影搜索服务
 1. 项目需求分析及架构设计
 2. 将音乐数据导入 Elasticsearch
-3. 搭建你的电影搜索服务   
+3. 搭建你的电影搜索服务
+4. 基于 Java 和 Elasticsearch 构建应用
 ### 实战 2：Stackoverflow 用户调查问卷分析
 1. 需求分析及架构设计
 2. 数据 Extract & Enrichment
@@ -120,6 +121,7 @@
 ### 备战：Elastic 认证
 1. Elastic 认证介绍
 2. 考点梳理
+3. 集群的数据备份
 
 # ELK 相关下载资源
 1. ELK 7.x  推荐官网直接下载，如网速低，可使用以下链接 - 百度网盘下载（https://pan.baidu.com/s/1CRT3W4wEESglCBDnslk2AA）

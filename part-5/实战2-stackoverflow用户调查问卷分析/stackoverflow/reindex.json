@@ -1,0 +1,10 @@
+POST _reindex?wait_for_completion=false
+{
+  "source": {
+    "index": "stackoverflow-surveys-2019"
+  },
+  "dest": {
+    "index": "stackoverflow-surveys-results",
+    "pipeline": "stackoverflow_pipeline"
+  }
+}
