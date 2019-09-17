@@ -1,2 +1,0 @@
-
-http://stackoverflow.com/research/ 
