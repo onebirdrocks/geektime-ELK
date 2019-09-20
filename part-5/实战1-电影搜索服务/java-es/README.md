@@ -2,3 +2,5 @@
 # 课程demo
 ```
 ```
+## 相关资料
+- https://spring.io/projects/spring-data-elasticsearch#overview
